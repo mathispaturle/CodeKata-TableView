@@ -27,6 +27,7 @@ final class Basic_03_Datasource: NSObject, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: Person_Cell_03 = tableView.dequeueReusableCell(for: indexPath)
+                
         cell.selectionStyle = .none
         cell.clipsToBounds = false
         

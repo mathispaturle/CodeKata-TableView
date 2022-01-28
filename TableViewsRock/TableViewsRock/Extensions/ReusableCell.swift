@@ -23,76 +23,77 @@ extension UITableView {
     final func register<T: UITableViewCell & ReusableCell>(cellType: T.Type) {
         register(cellType.self, forCellReuseIdentifier: cellType.reuseIdentifier)
     }
-
-    final func register<T: UITableViewHeaderFooterView & ReusableCell>(headerFooterType: T.Type) {
-        register(headerFooterType.self, forHeaderFooterViewReuseIdentifier: headerFooterType.reuseIdentifier)
-    }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
     final func dequeueReusableCell<T: UITableViewCell & ReusableCell>(for indexPath: IndexPath) -> T {
         guard let cell = dequeueReusableCell(withIdentifier: T.reuseIdentifier, for: indexPath) as? T else {
             fatalError("Failed to dequeue reusable cell with identifier '\(T.reuseIdentifier)'. Did you forget to register the cell first?")
         }
         return cell
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    final func register<T: UITableViewHeaderFooterView & ReusableCell>(headerFooterType: T.Type) {
+        register(headerFooterType.self, forHeaderFooterViewReuseIdentifier: headerFooterType.reuseIdentifier)
     }
 
     final func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView & ReusableCell>() -> T {

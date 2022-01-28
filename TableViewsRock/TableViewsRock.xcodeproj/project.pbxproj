@@ -252,9 +252,9 @@
 		E5C5C98927A2F49D0053A57C /* 04_ComplexStructure */ = {
 			isa = PBXGroup;
 			children = (
-				E5B72CFD27A33E0B0007BD82 /* 04_CustomCells.swift */,
 				E5B72D0027A33E0B0007BD82 /* Cells */,
 				E5B72CFB27A33E0B0007BD82 /* Data */,
+				E5B72CFD27A33E0B0007BD82 /* 04_CustomCells.swift */,
 			);
 			path = 04_ComplexStructure;
 			sourceTree = "<group>";

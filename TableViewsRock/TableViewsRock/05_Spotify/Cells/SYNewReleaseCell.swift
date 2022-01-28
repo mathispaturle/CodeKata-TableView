@@ -80,7 +80,12 @@ class SYNewReleaseCell: UITableViewCell, ReusableCell {
         return lbl
     }()
     
-    
+    let button: UIButton = {
+        let btn = UIButton()
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        
+        return btn
+    }()
     
     override class func awakeFromNib() {
         super.awakeFromNib()
@@ -96,6 +101,7 @@ class SYNewReleaseCell: UITableViewCell, ReusableCell {
         cardView.addSubview(imageCover)
         cardView.addSubview(songName)
         cardView.addSubview(songDescription)
+        cardView.addSubview(button)
     }
     
     private func setupStyles() {
@@ -176,6 +182,11 @@ class SYNewReleaseCell: UITableViewCell, ReusableCell {
 
             songDescription.topAnchor.constraint(equalTo: songName.bottomAnchor, constant: 4),
             songDescription.leadingAnchor.constraint(equalTo: songName.leadingAnchor),
+            
+            button.topAnchor.constraint(equalTo: songName.bottomAnchor, constant: 12),
+            button.leadingAnchor.constraint(equalTo: songName.leadingAnchor),
+            button.heightAnchor.constraint(equalToConstant: 40),
+            button.widthAnchor.constraint(equalToConstant: 40),
         ])
     }
 }

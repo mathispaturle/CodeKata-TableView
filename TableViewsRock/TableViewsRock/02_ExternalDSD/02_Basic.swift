@@ -10,6 +10,7 @@ import UIKit
 
 class Basics02: UIViewController {
     
+    // Estructura de datos que vamos a usar en nuestra tableView
     let data = ["Oscar", "Cane", "Iñigo", "Nacho", "Victor", "Alex", "Sergi", "Puto AF..."]
     
     var tableView: UITableView = {
@@ -19,10 +20,12 @@ class Basics02: UIViewController {
         return tableView
     }()
     
+    // Datasource externo que se inicializará la primera vez que sea llamada
     lazy var tableViewDataSource: Basic_02_Datasource = {
         return Basic_02_Datasource(tableView: tableView, viewModel: data)
     }()
     
+    // Delegate externo que se inicializará la primera vez que sea llamada
     lazy var tableViewDelegate: Basic_02_Delegate = {
         return Basic_02_Delegate(view: self)
     }()
@@ -37,6 +40,7 @@ class Basics02: UIViewController {
     private func setupTableView() {
         view.addSubview(tableView)
 
+        // Asignamos los delegados y datasource a las variables externas
         tableView.delegate = tableViewDelegate
         tableView.dataSource = tableViewDataSource
     }
